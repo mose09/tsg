@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "test": "node tests/disambiguation/disambiguation.test.mjs"
+  },
   "dependencies": {
     "playwright": "^1.60.0",
     "xlsx": "^0.18.5"

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><title>명확화 회귀 테스트 픽스처</title></head>
+<body>
+  <h1>협력사 관리</h1>
+
+  <!-- 패턴 A: 레이블 부분일치 — "삭제"가 "협력사 삭제"에도 포함됨 -->
+  <section id="toolbar">
+    <button onclick="mark(this)">삭제</button>
+    <button onclick="mark(this)">협력사 삭제</button>
+  </section>
+
+  <!-- 패턴 B: 동일 레이블("삭제")이 여러 행에 반복 — 행 컨테이너로 구분해야 함 -->
+  <table>
+    <tbody>
+      <tr><td>고객사 A</td><td><button data-row="고객사 A" onclick="mark(this)">삭제</button></td></tr>
+      <tr><td>협력사 B</td><td><button data-row="협력사 B" onclick="mark(this)">삭제</button></td></tr>
+    </tbody>
+  </table>
+
+  <div id="status">아직 클릭 안 함</div>
+  <script>
+    function mark(el){
+      var dr = el.getAttribute('data-row');
+      var label = dr ? (el.textContent + ' @ ' + dr) : el.textContent;
+      window.__clicked = label;
+      document.getElementById('status').textContent = '클릭됨: ' + label;
+    }
+  </script>
+</body></html>

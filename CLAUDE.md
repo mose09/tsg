@@ -18,3 +18,4 @@
 | 2026-05-29 | 샘플 엑셀로 전 파이프라인 실행 검증 (TodoMVC, 통과2/실패1) | 전체 | 동작 확인 |
 | 2026-05-29 | id 중복 접두사(TC-TC-001) 버그 수정 | skills/excel-to-testcase/scripts/xlsx-to-md.mjs | 테스트 중 발견 |
 | 2026-05-29 | 요소 명확화(disambiguation) 섹션 추가 | skills/browser-test-execution/SKILL.md | 셀렉터 모호성 실패(삭제 vs 협력사 삭제) 대응 |
+| 2026-05-29 | 명확화 규칙 회귀 테스트 추가 (npm test) | tests/disambiguation/ | 규칙 퇴행 방지 |
