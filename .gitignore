@@ -1,0 +1,13 @@
+# 자격증명 (절대 커밋 금지)
+.env
+
+# 실행 산출물
+_workspace/
+_workspace_*/
+report/
+
+# 의존성
+node_modules/
+
+# 로그
+*.log
